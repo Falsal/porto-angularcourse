@@ -1,0 +1,158 @@
+/*
+1. General Rules
+2. Companyname & Logo 
+3. Menu Icon
+4. Navigation 
+5. Nav Mobile
+6. Nav Desktop
+7. Media Query Mobile
+*/
+
+/* General Rules */
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #0B0C10;
+}
+
+/* Company Name/Logo - Section */
+
+.leftContainer {
+    display: flex;
+}
+
+.companyContainer {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.imgContainer {
+    height: 5em;
+    width: 5em;
+    overflow: hidden;
+}
+
+.imgContainer img {
+    transform: scaleX(-1);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(100%);
+}
+
+.companyContainer h1 {
+    margin-left: 0.5em;
+    font-size: 2em;
+    font-family: 'Arvo', serif;
+    color: white;
+}
+
+.companyContainer h1 span {
+    font-weight: 600;
+}
+
+/* Icon - Menu */
+
+.btnMenu {
+    display: none;
+    margin-left: 2em;
+}
+
+.btnMenu img {
+    width: auto;
+    height: 5em;
+}
+
+/* Navigation - Section */
+
+nav ul li a {
+    position: relative;
+    font-family: 'Arvo', serif;
+    text-decoration: none;
+    color: #66FCF1;
+}
+
+/* Navbar - Mobile */
+
+#navMobile {
+    display: none;
+}
+
+#navMobile ul {
+    flex-direction: column;
+}
+
+#navMobile ul li {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+#navMobile ul li a {
+    font-size: 1.5em;
+}
+
+/* Navigation - Desktop */
+
+#navDesktop {
+    margin: auto 0;
+}
+
+#navDesktop ul {
+    display: flex;
+    list-style-type: none;
+}
+
+#navDesktop ul li {
+    margin-left: 2em;
+}
+
+#navDesktop ul li a {
+    font-size: 1.1rem;
+}
+
+#navDesktop ul li a.left:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #66FCF1;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#navDesktop ul li a.left:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+/* Media Query Mobile */
+
+@media only screen and (max-width: 1050px) {
+    /*Navbar - Section */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    #navDesktop {
+        display: none;
+    }
+    /* Menu Icon */
+    .leftContainer .btnMenu {
+        display: block;
+    }
+}

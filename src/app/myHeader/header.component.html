@@ -1,0 +1,56 @@
+<header>
+    <div class="leftContainer">
+        <a href="#hero" class="companyContainer">
+            <div class="imgContainer">
+                <img src="../../assets/img/iconEye2.png">
+            </div>
+            <h1>angu<span>ZILLA</span></h1>
+        </a>
+        <!-- navbar open closes when clicked -->
+        <a class="btnMenu" (click)="toggleMobileNav()">
+            <img src="../../assets/img/iconBarsFree.png">
+        </a>
+    </div>
+
+    <!-- two navbars (mobile & desktop) to simplify TS code  -->
+    <!-- navbar closes when clicked -->
+    <nav id="navMobile">
+        <ul>
+            <li>
+                <a (click)="toggleMobileNav()" href="#courseTopic">why angular</a>
+            </li>
+            <li>
+                <a (click)="toggleMobileNav()" href="#information">about us</a>
+            </li>
+            <li>
+                <a (click)="toggleMobileNav()" href="#testimonials">testimonials</a>
+            </li>
+            <li>
+                <a (click)="toggleMobileNav()" href="#newsUpdates">news & updates</a>
+            </li>
+            <li>
+                <a (click)="toggleMobileNav()" href="#courses">courses & prices</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav id="navDesktop">
+        <ul>
+            <li>
+                <a class="left" href="#courseTopic">why angular</a>
+            </li>
+            <li>
+                <a class="left" href="#information">about us</a>
+            </li>
+            <li>
+                <a class="left" href="#testimonials">testimonials</a>
+            </li>
+            <li>
+                <a class="left" href="#newsUpdates">news & updates</a>
+            </li>
+            <li>
+                <a class="left" href="#courses">courses & prices</a>
+            </li>
+        </ul>
+    </nav>
+</header>
